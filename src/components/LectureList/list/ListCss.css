@@ -1,0 +1,60 @@
+.save {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.save p {
+    margin: 0;
+    margin-right: 2rem;
+}
+
+.save button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 0.4rem;
+    padding: 0.3rem 1.8rem;
+    background-color: rgb(41, 41, 245);
+    color: #ffff;
+}
+
+.List {
+    margin-top: 2rem;
+}
+
+.listOption {
+    width: 90%;
+    height: 200px;
+    border: 1px solid;
+    border-radius: 0.4rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.lo_option {
+    border: 1px solid black;
+    width: 19%;
+    height: 2rem;
+    margin: 0.5%;
+    padding: 0.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lo_option p {
+    margin: 0;
+}
+
+.lo_option>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}

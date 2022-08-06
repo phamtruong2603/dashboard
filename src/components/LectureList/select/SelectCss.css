@@ -1,0 +1,19 @@
+.mainTitle p {
+    margin: 0.2rem 0;
+}
+
+.title {
+    font-weight: 700;
+}
+
+.option {
+    padding-left: 1rem;
+}
+
+.option form input {
+    outline: none;
+    padding-left: 0.3rem;
+    border: 2px rgb(172, 171, 173);
+    border-style: outset;
+    border-radius: 3px;
+}
