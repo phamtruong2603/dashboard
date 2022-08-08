@@ -6,26 +6,10 @@ export const lecture = [
             {
                 title: 'Lớp 7',
                 key: '0-0',
-                children: [
-                    {
-                        title: 'Môn khoa học tự nhiên',
-                        key: '0-0-0',
-                    },
-                    {
-                        title: 'Môn sinh',
-                        key: '0-0-1',
-                    },
-                ]
             },
             {
                 title: 'Lớp 8',
                 key: '0-1',
-                children: [
-                    {
-                        title: 'Môn khoa học tự nhiên',
-                        key: '0-1-0',
-                    },
-                ]
             },
             {
                 title: 'Lớp 9',
@@ -60,56 +44,6 @@ export const lecture = [
             {
                 title: 'Lớp 6',
                 key: '1-5',
-                children: [
-                    {
-                        title: 'Môn khoa học tự nhiên',
-                        key: '1-5-0',
-                    },
-                    {
-                        title: 'Môn sinh',
-                        key: '1-5-1',
-                    },
-                ]
-            },
-            {
-                title: 'Lớp 7',
-                key: '1-6',
-                children: [
-                    {
-                        title: 'Môn khoa học tự nhiên',
-                        key: '1-6-0',
-                    },
-                    {
-                        title: 'Môn sinh',
-                        key: '1-6-1',
-                    },
-                ]
-            },
-            {
-                title: 'Lớp 8',
-                key: '1-7',
-                children: [
-                    {
-                        title: 'Môn khoa học tự nhiên',
-                        key: '1-7-1-0',
-                    },
-                ]
-            },
-            {
-                title: 'Lớp 9',
-                key: '1-8',
-            },
-            {
-                title: 'Lớp 10',
-                key: '1-9',
-            },
-            {
-                title: 'Lớp 11',
-                key: '1-10',
-            },
-            {
-                title: 'Lớp 12',
-                key: '1-11',
             },
         ]
     },
@@ -132,3 +66,11 @@ export const lecture = [
         ],
     },
 ]
+
+const transform1 = ({ title = '', key = '', children = [] }) =>
+    [{ title, key }, ...transformAll(children)] // calls transformAll
+
+const transformAll = (children = []) =>
+    children.flatMap(c => transform1(c)) // calls transform1
+
+export const lectures = [...transformAll(lecture)]
