@@ -43,10 +43,12 @@ const List = () => {
       <div className='listOption'>
         {
           a.map((list, index) => {
+            // const mx = lectures.find(a => a.key === list.slice('-')[0])
+            // console.log(mx)
             const x = lectures.find(a => a.key === list)
             return (
               <div className='lo_option' key={index}>
-                <p>{x.title}</p>
+                <p>{`${x.title}`}</p>
                 <div onClick={() => Delete(list)}>x</div>
               </div>
             );

@@ -35,9 +35,14 @@ const Select = () => {
 
     const submit = (e) => {
         e.preventDefault()
-        const x = lectures.find(a => a.title === search)
-        setExpandedKeys([x.key])
-        setSelectedKeys([x.key])
+        let check = []
+        lectures.forEach(a => {
+            if (a.title === search) {
+                return check.push(a.key)
+            }
+        })
+        setExpandedKeys(check)
+        setSelectedKeys(check)
     }
 
     return (

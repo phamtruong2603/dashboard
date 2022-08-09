@@ -4,6 +4,10 @@ export const lecture = [
         key: '0',
         children: [
             {
+                title: 'Lớp 1',
+                key: '0-3',
+            },
+            {
                 title: 'Lớp 7',
                 key: '0-0',
             },
